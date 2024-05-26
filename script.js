@@ -22,8 +22,12 @@ function Addtasks(event){
     }
 }
 tasks.addEventListener('click',(e)=>{
-    if(e.target.tagName==='LI'){
+    if(e.target.tagName==='LI' ){
         e.target.classList.toggle('check');
+        const fc=tasks.firstChild;
+        e.target.remove();
+        tasks.insertBefore(e.target,tasks.children[0]);
+
         save();
     }
     if(e.target.tagName==='SPAN'){
