@@ -20,6 +20,9 @@
     height: 50%;
     border-radius: 20px;
     padding: 15px;
+    overflow: hidden;
+    position:absolute;
+    
 }
 
 .icon {
@@ -64,7 +67,15 @@
     cursor: pointer;
 }
 
+#tasks{
+    overflow-y: auto;
+    position: relative;
+    width: 100%;
+    height: 200px;
+    /* overflow-y: hidden; */
+}
 #tasks li {
+    
     list-style: none;
     margin-top: 30px;
     padding-left: 30px;
@@ -105,7 +116,7 @@
     text-align: center;
 }
 
-#tasks li span:hover {
+#tasks li span:hover{
     color: white;
 }
 
@@ -179,3 +190,23 @@
         font-size: 14px;
     }
 }
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background:indigo; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background:lightblue; 
+  }
